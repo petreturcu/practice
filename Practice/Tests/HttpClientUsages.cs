@@ -4,7 +4,6 @@
     using System.Diagnostics;
     using System.Net.Http;
     using System.Threading.Tasks;
-
     using NUnit.Framework;
 
     using Assert = NUnit.Framework.Assert;
@@ -13,6 +12,7 @@
     public class HttpClientUsageTests
     {
         [Test]
+        [Ignore("This test is for demonstration purposes only, and is not a unit test.")]
         public async Task GetStringAsync_WhenPutInAUsing_IsConsiderablySlowerThanReusing()
         {
             // Arrange
@@ -46,7 +46,7 @@
             timeWithReusable = sw.Elapsed.TotalSeconds;
 
             // Assert
-            Assert.Greater(timeWithUsing, timeWithReusable * 1.5);
+            Assert.That(timeWithUsing, Is.GreaterThan(timeWithReusable * 1.5));
         }
 
     }

@@ -44,7 +44,7 @@
             var actual = str.GetCharacterFrequency();
 
             // Assert
-            actual.ShouldBeEquivalentTo(expected);
+            actual.Should().BeEquivalentTo(expected);
         }
     }
 }

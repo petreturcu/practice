@@ -22,7 +22,7 @@
             IEnumerable<Match> actual = TeamScheduling.GetMatchesFor(teams);
 
             // Assert
-            expectedMatchIds.ShouldBeEquivalentTo(string.Join(" ", actual.Select(m => $"{m.Team1.Id}{m.Team2.Id}")));
+            expectedMatchIds.Should().BeEquivalentTo(string.Join(" ", actual.Select(m => $"{m.Team1.Id}{m.Team2.Id}")));
         }
     }
 }
