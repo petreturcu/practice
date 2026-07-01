@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Algs/Algs.csproj" />
+  <Project Path="PracticeCore/PracticeCore.csproj" />
+  <Project Path="Tests/Tests.csproj" />
+</Solution>
